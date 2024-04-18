@@ -2,7 +2,8 @@ const wordFrequencyCounter = require('./word-frequency-counter');
 
 describe('wordFrequencyCounter', () => {
   it('should count word frequencies correctly', () => {
-    const input = "The quick brown fox jumps over the lazy dog. The dog barks, and the fox runs away.";
+    const input =
+      'The !.,quick brown fox jumps over the lazy dog. The dog barks, and the fox runs away.';
     const expectedOutput = new Map([
       ['the', 4],
       ['quick', 1],
@@ -32,9 +33,7 @@ describe('wordFrequencyCounter', () => {
 
   it('should handle input with single word', () => {
     const input = 'hello';
-    const expectedOutput = new Map([
-      ['hello', 1],
-    ]);
+    const expectedOutput = new Map([['hello', 1]]);
 
     const result = wordFrequencyCounter(input);
     expect(result).toEqual(expectedOutput);
